@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request IT Database</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container-fluid">
+<!-- Content here -->
+    <!-- tạo navbar-->
+    <nav class="navbar navbar-expand-lg navbar-custom bg-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="taorequest.html">Tạo request</a>
+            </li>            
+            <li class="nav-item">
+                <a class="nav-link" href="#">Tài liệu IT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kho IT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Hướng dẫn</a>
+            </li>
+        </ul>
+        <div>
+            <span class="hello-msg">Hello, admin</span>
+            <span><a class="hello-msg" href="{% url 'logout'%}">Thoát</a></span>
+          </div>
+        </div>
+    </nav>
+    <!--end navbar-->
+    <div id="content" class="row">
+        <div class="col-2 mx-auto">
+           <div class="row">
+               <div class="col">
+                    <p class="btn btn-info btn-lg btn-block" id="title">Loại request</p>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <a href="$" class="">Có chi phí</a>
+                          <span class="badge badge-primary badge-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">Bảo mật</a>
+                          <span class="badge badge-primary badge-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">Khác</a>
+                          <span class="badge badge-primary badge-pill">1</span>
+                        </li>
+                      </ul>
+               </div>
+           </div>
+           <br />
+           <div class="row">
+                <div class="col">
+                    <p class="btn btn-info btn-lg btn-block" id="title">Status</p>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">Hoàn thành</a>
+                        <span class="badge badge-primary badge-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">Chưa hoàn thành</a>
+                        <span class="badge badge-primary badge-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">Không chấp nhận</a>
+                        <span class="badge badge-primary badge-pill">1</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col">
+                    <p class="btn btn-info btn-lg btn-block" id="title">Đánh giá</p>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">5 sao</a>
+                            <span class="badge badge-primary badge-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">4 sao</a>
+                            <span class="badge badge-primary badge-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">3 sao</a>
+                            <span class="badge badge-primary badge-pill">1</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">2 sao</a>
+                            <span class="badge badge-primary badge-pill">1</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="$" class="">1 sao</a>
+                            <span class="badge badge-primary badge-pill">1</span>
+                        </li>
+                    </ul>  
+                </div>
+            </div>
+        </div>
+        <div class="col-10 mx-auto">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputEmail4">Họ & tên</label>
+                        <input class="form-control" type="text" placeholder="họ và tên" readonly>
+                        </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputState">Bộ phận</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Vui lòng chọn</option>
+                            <option>Kế toán</option>
+                            <option>Thu mua</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputPassword4">Số điện thoại</label>
+                        <input type="text" class="form-control" id="inputPassword4" placeholder="ĐT liên hệ">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputState">Quản lý</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Vui lòng chọn</option>
+                            <option>Kế toán</option>
+                            <option>Thu mua</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputState">Loại Request</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Vui lòng chọn</option>
+                            <option>Kế toán</option>
+                            <option>Thu mua</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputState">Thời gian muốn giải quyết</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Vui lòng chọn</option>
+                            <option>Kế toán</option>
+                            <option>Thu mua</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div class="form-group">
+                            <label for="inputAddress">Tiêu đề</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Nhập tiêu đề">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div class="form-group">
+                            <label for="inputAddress">File cần nhập</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                    </div>
+                </div>
+               <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <div class="form-group">
+                            <label for="content">Nội dung</label>
+                            <textarea class="form-control" id="content" rows="9"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi</button>
+                </form>
+        </div>
+        
+    </div>
+ 
+    <footer class="footer">
+       <span class="text-center">Copyright © 2020 Việt Đinh. All Rights Reserved.</span>
+    </footer>  
+</div> 
+<script src="js/jquery-3.4.1.slim.min.js"" ></script>
+<script src="js/popper.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+
+</body>
+</html>
